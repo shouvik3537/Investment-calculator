@@ -1,22 +1,22 @@
-import { useState } from "react";
-
-const [userInput, setUserInput] = useState({
-  initialInvestment:  10000,
-  annualInvestment: 1200,
-  expectedReturn: 12,
-  duration: 10,
-});
-
-function handleInput (inputIdentifier, newValue){
-  setUserInput(prevUserInput => {
-    return{
-       ...prevUserInput,
-       [inputIdentifier]: newValue
-   };
-   });
-}
+import { useState } from 'react';
 
 export default function Input(){
+
+  const [userInput, setUserInput] = useState({
+    initialInvestment:  10000,
+    annualInvestment: 1200,
+    expectedReturn: 12,
+    duration: 10,
+  });
+
+  function handleInput (inputIdentifier, newValue){
+    setUserInput(prevUserInput => {
+      return{
+         ...prevUserInput,
+         [inputIdentifier]: newValue
+     };
+     });
+  }
     return(
       <section id="user-input">
            <div className="input-group">
@@ -50,7 +50,7 @@ export default function Input(){
               <label>Duration</label>
               <input type="number" 
                required
-               value={userInput.Duration}
+               value={userInput.duration}
                onChange={(event) =>handleInput('Duration',event.target.value)}
              />
             </p>
