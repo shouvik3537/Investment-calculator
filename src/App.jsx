@@ -1,7 +1,16 @@
+import Input from "./components/Input";
+
 function App() {
+  const headerArray = ["Year", "Investment", "Interest(Year)", "Total Interest", "Investment Capitial" ];
+
+
   return (
-    <h1>React Investment Calculator</h1>
-  )
+    <div>
+      <Input />
+      {headerArray}
+
+    </div>
+      );
 }
 
 export default App
