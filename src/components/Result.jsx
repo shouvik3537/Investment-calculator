@@ -16,7 +16,7 @@ export default function Result({input}){
                 {resultData.map(yearData => {
                     return <tr key={yearData.year}>
                         <td>{yearData.year}</td>
-                        <td>{formatter.format(yearData.valueEndofYear)}</td>
+                        <td>{formatter.format(yearData.valueEndOfYear)}</td>
                         <td>{formatter.format(yearData.interest)}</td>
                         <td></td>
                         <td></td>
