@@ -22,7 +22,7 @@ export default function Input({onChange, userInput}){
           </div>
           <div className="input-group">
             <p>
-              <label>Expected Result</label>
+              <label>Expected Return</label>
               <input type="number" 
                required
                value={userInput.expectedReturn}
