@@ -14,14 +14,14 @@ function App() {
     setUserInput(prevUserInput => {
       return{
          ...prevUserInput,
-         [inputIdentifier]: newValue
+         [inputIdentifier]: +newValue //Initial the input of the newvalue is string + makes its numerical
      };
      });
   }
   return (
     <div>
       <Input userInput={userInput} onChange={handleInput}/>
-      <Result/>
+      <Result input={userInput}/>
     </div>
       );
 }
